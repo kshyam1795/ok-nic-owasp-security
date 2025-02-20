@@ -1,5 +1,5 @@
 {
-    "name": "sam/ok-nic-owasp-security",
+    "name": "growats/ok-nic-owasp-security",
     "description": "A Laravel package for OWASP security best practices",
     "type": "library",
     "license": "MIT",
@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sam\\OkNicOwaspSecurity\\OwaspSecurityServiceProvider"
+                "growats\\OkNicOwaspSecurity\\OwaspSecurityServiceProvider"
             ]
         }
     }

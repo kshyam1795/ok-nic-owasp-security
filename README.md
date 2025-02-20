@@ -12,7 +12,7 @@
 Install the package using Composer:
 
 ```sh
-composer require sam/ok-nic-owasp-security
+composer require Growats/ok-nic-owasp-security
 
 
 
@@ -29,11 +29,11 @@ config/owasp-security.php
 Add the middleware to app/Http/Kernel.php under $middleware:
 
 protected $middleware = [
-    \Sam\OkNicOwaspSecurity\Middleware\SecurityHeaders::class,
-    \Sam\OkNicOwaspSecurity\Middleware\XssSanitization::class,
-    \Sam\OkNicOwaspSecurity\Middleware\RateLimiting::class,
-    \Sam\OkNicOwaspSecurity\Middleware\SqlInjectionProtection::class,
-    \Sam\OkNicOwaspSecurity\Middleware\CorsProtection::class,
+    \Growats\OkNicOwaspSecurity\Middleware\SecurityHeaders::class,
+    \Growats\OkNicOwaspSecurity\Middleware\XssSanitization::class,
+    \Growats\OkNicOwaspSecurity\Middleware\RateLimiting::class,
+    \Growats\OkNicOwaspSecurity\Middleware\SqlInjectionProtection::class,
+    \Growats\OkNicOwaspSecurity\Middleware\CorsProtection::class,
 ];
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sam\OkNicOwaspSecurity;
+namespace Growats\OkNicOwaspSecurity;
 
 use Illuminate\Support\ServiceProvider;
 

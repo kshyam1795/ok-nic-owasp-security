@@ -1,6 +1,6 @@
 <?php
 
-namespace Sam\OkNicOwaspSecurity\Middleware;
+namespace Growats\OkNicOwaspSecurity\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
