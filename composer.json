@@ -1,0 +1,29 @@
+{
+    "name": "sam/ok-nic-owasp-security",
+    "description": "A Laravel package for OWASP security best practices",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shyamendra Kushwaha",
+            "email": "shyamendrakushwaha1@gmail.com.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+     
+    "autoload": {  
+        "psr-4": {
+            "Sam\\OkNicOwaspSecurity\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sam\\OkNicOwaspSecurity\\OwaspSecurityServiceProvider"
+            ]
+        }
+    }
+
+}
+
