@@ -1,29 +1,47 @@
 {
     "name": "growats/ok-nic-owasp-security",
-    "description": "A Laravel package for OWASP security best practices",
+    "description": "Installable Laravel OWASP security package with Super Admin RBAC, toggleable headers/auth protections, OTP, rate limiting, and audit-driven settings.",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "laravel",
+        "owasp",
+        "security",
+        "rbac",
+        "headers",
+        "otp",
+        "rate-limiting",
+        "authentication"
+    ],
     "authors": [
         {
             "name": "Shyamendra Kushwaha",
-            "email": "shyamendrakushwaha1@gmail.com.com"
+            "email": "shyamendrakushwaha1@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {},
-     
-    "autoload": {  
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/database": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/http": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/routing": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/cache": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/auth": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/console": "^9.0|^10.0|^11.0|^12.0",
+        "illuminate/view": "^9.0|^10.0|^11.0|^12.0"
+    },
+    "autoload": {
         "psr-4": {
-            "Sam\\OkNicOwaspSecurity\\": "src/"
+            "Growats\\OkNicOwaspSecurity\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "growats\\OkNicOwaspSecurity\\OwaspSecurityServiceProvider"
+                "Growats\\OkNicOwaspSecurity\\OwaspSecurityServiceProvider"
             ]
         }
-    }
-
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
-
