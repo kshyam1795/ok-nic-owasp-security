@@ -47,7 +47,12 @@ class OwaspSecurityServiceProvider extends ServiceProvider
 
         $this->registerMiddleware();
         $this->registerCommands();
-        $this->pushGlobalMiddleware();
+
+        // Push after HTTP Kernel syncs middleware groups (Laravel 9/10),
+        // otherwise router group pushes get overwritten.
+        $this->app->booted(function () {
+            $this->pushGlobalMiddleware();
+        });
     }
 
     protected function registerMiddleware(): void

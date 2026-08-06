@@ -94,14 +94,12 @@ class InstallOwaspSecurity extends Command
             \Growats\OkNicOwaspSecurity\Middleware\AuthenticationProtection::class,
         ];
 
-        // Laravel 11+ bootstrap/app.php
         $bootstrap = base_path('bootstrap/app.php');
-        if (File::exists($bootstrap)) {
-            $contents = File::get($bootstrap);
-            if (!str_contains($contents, 'OkNicOwaspSecurity\\Middleware\\SecurityHeaders')) {
-                $this->comment('  Laravel 11+ detected. Middleware is auto-pushed by the service provider when OWASP_AUTO_MIDDLEWARE=true.');
-                $this->comment('  Ensure .env has OWASP_AUTO_MIDDLEWARE=true (default).');
-            }
+        $isLaravel11Plus = File::exists($bootstrap) && str_contains(File::get($bootstrap), 'Application::configure');
+
+        if ($isLaravel11Plus) {
+            $this->comment('  Laravel 11+ detected. Middleware is auto-pushed by the service provider when OWASP_AUTO_MIDDLEWARE=true.');
+            $this->comment('  Ensure .env has OWASP_AUTO_MIDDLEWARE=true (default).');
             return;
         }
 
